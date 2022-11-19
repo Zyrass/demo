@@ -1,0 +1,185 @@
+/**
+ * ============================================================
+ * VARIABLES
+ * ============================================================
+ */
+:root {
+  --primary: #333;
+  --secondary: #666;
+  --third: #999;
+  --white: antiquewhite;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * ============================================================
+ * BASE
+ * ============================================================
+ */
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 54px 1fr 108px;
+}
+ul {
+  list-style: none;
+}
+
+/**
+ * ============================================================
+ * HEADER
+ * ============================================================
+ */
+header {
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header span {
+  margin-left: 30px;
+}
+header nav ul {
+  display: flex;
+  column-gap: 30px;
+}
+header nav ul li:last-child {
+  margin-right: 30px;
+}
+
+/**
+ * ============================================================
+ * FOOTER
+ * ============================================================
+ */
+footer {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-around;
+  color: var(--white);
+}
+footer img {
+  padding: 8px 0;
+  border-radius: 10%;
+}
+footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/**
+ * ============================================================
+ * MAIN
+ * ============================================================
+ */
+main {
+  background-color: var(--third);
+  display: grid;
+  grid-template-columns: 300px 5fr 1fr;
+  /* grid-template-rows: 1fr 7fr; */
+  grid-template-rows: 100px 1fr;
+  grid-template-areas:
+    "menu trombinoscope trombinoscope"
+    "menu gallery aside";
+}
+/**
+ * ============================================================
+ * MAIN H1
+ * ============================================================
+ */
+main h1 {
+  grid-area: trombinoscope;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/**
+ * ============================================================
+ * MAIN MENU
+ * ============================================================
+ */
+main section.menu {
+  grid-area: menu;
+  background-color: var(--third);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section.menu h2 {
+  margin: 50px 0;
+  padding-bottom: 25px;
+  width: 80%;
+  text-align: center;
+  font-size: 38px;
+  border-bottom: 2px solid var(--white);
+}
+main section.menu ul {
+  width: 90%;
+}
+main section.menu ul li {
+  background-color: var(--white);
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  margin: 0 auto 5px;
+  border-radius: 5px;
+  transition: transform 0.2s, color 0.2s, background-color 0.2s;
+}
+main section.menu ul li:hover {
+  background-color: var(--secondary);
+  color: var(--white);
+  transform: scale(1.06);
+}
+
+/**
+ * ============================================================
+ * MAIN GALLERY
+ * ============================================================
+ */
+main section.gallery {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 25px;
+  row-gap: 25px;
+}
+main section.gallery {
+  grid-area: gallery;
+  background-color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+}
+main section.gallery .card {
+  height: 250px;
+  width: 200px;
+}
+main section.gallery .card figure {
+  width: 100%;
+}
+main section.gallery .card figure img {
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+}
+main section.gallery .card figure figcaption {
+  background-color: var(--third);
+  padding: 15px;
+}
+
+/**
+ * ============================================================
+ * MAIN ASIDE
+ * ============================================================
+ */
+main aside {
+  grid-area: aside;
+  background-color: aquamarine;
+}
