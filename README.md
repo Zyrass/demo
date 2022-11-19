@@ -12,10 +12,10 @@ sdsdfsfdlsùdfl
 - sdmfsùmflmsùflms
 - fmùsldfùsm
   
-[ ] - lmfsdlmfks
-[X] - lmfsdlmfks
-[ ] - lmfsdlmfks
-[ ] - lmfsdlmfks
+- [ ] - lmfsdlmfks
+- [X] - lmfsdlmfks
+- [ ] - lmfsdlmfks
+- [ ] - lmfsdlmfks
 
 1. sdlkfslmdf
 2. fsùflsùmdf
